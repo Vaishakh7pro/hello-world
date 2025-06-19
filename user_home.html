@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CINESPHERE</title>
+  <link rel="stylesheet" href="user_home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Header -->
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">CINESPHERE</div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#" id="moviesLink">Movies</a>
+        <a href="#" id="comingSoonLink">Coming Soon</a>
+        <a href="#" id="ticketsLink">Tickets</a>
+        <a href="#" id="accountLink">Account</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<!-- 🌐 Account Sidebar -->
+<div id="accountSidebar" class="account-sidebar">
+  <div class="account-header">
+    <h2>👤 My Account</h2>
+    <span class="close-btn" onclick="closeProfileSidebar()">×</span>
+  </div>
+  <div id="profileContent" class="account-content">
+    <!-- Profile & bookings will load here dynamically -->
+  </div>
+</div>
+
+
+
+
+  <!-- 🦸 Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 id="heroTitle">Welcome <span id="usernameSpan">User</span> to <span>CINESPHERE</span></h1>
+      <p>Book your tickets for the latest blockbusters with our immersive booking experience</p>
+      <a class="btn" href="#">Explore Movies</a>
+    </div>
+  </section>
+
+  <!-- 🔍 Search Bar -->
+  <section id="search-section">
+    <div class="container" style="text-align: center; margin-top: 40px; position: relative;">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search for a movie..."
+        autocomplete="off"
+        style="padding: 10px 20px; border-radius: 25px; border: 1px solid #ccc; width: 300px; max-width: 90%;">
+      <div id="suggestions"
+        style="position: absolute; left: 50%; transform: translateX(-50%); width: 320px; max-width: 90%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.15); border-radius: 10px; z-index: 1000;">
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎬 Now Showing -->
+  <section id="now-showing" style="display: none;">
+    <h2 class="section-title">Now Showing</h2>
+    <div class="movies-grid" id="movies-container"></div>
+  </section>
+
+  <!-- 🚀 Coming Soon Flip Ticket -->
+  <section class="coming-soon" id="coming-soon">
+    <h2 class="section-title">Coming Soon</h2>
+    <div class="ticket-container">
+      <div class="ticket" id="comingSoonTicket">
+        <div class="ticket-inner">
+          <div class="ticket-front">
+            <h3>Galactic Wars: The Final Battle</h3>
+            <p>Release Date: June 15, 2025</p>
+            <p>Get notified when tickets are available!</p>
+            <button class="btn" id="flipBtn">Notify Me</button>
+          </div>
+          <div class="ticket-back">
+            <h3>Stay Updated</h3>
+            <p>Enter your email to get notified</p>
+            <input type="email" placeholder="Your Email" />
+            <button class="btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📜 Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 class="footer-title">CINESPHERE</h3>
+        <p>Immersive movie experiences, smart booking, and the magic of cinema.</p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-title">Quick Links</h3>
+        <div class="footer-links">
+          <a href="#">Movies</a>
+          <a href="#">Cinemas</a>
+          <a href="#">Gift Cards</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-title">Support</h3>
+        <div class="footer-links">
+          <a href="#">FAQs</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2025 CINESPHERE. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="user_home.js" defer></script>
+  <script src="user_profile.js" defer></script>
+</body>
+</html>

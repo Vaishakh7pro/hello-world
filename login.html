@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cinesphere Login</title>
+
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <h2>Welcome to Cinesphere - Movie Ticket Booking</h2>
+
+  <div class="container" id="container">
+    <!-- ===== SIGN UP FORM ===== -->
+    <div class="form-container sign-up-container">
+      <form id="signup-form">
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>Use your email for registration</span>
+        <input type="text" placeholder="Username" required />
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <select required>
+          <option disabled selected>Select Country</option>
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+          <option>Canada</option>
+          <option>Germany</option>
+          <option>Other</option>
+        </select>
+        <input type="password" placeholder="Password" required />
+        <select required>
+          <option value="" disabled selected>Select Role</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+          <option value="theater_owner">Theater Owner</option>
+        </select>
+        <button>Sign Up</button>
+      </form>
+    </div>
+
+    <!-- ===== SIGN IN FORM ===== -->
+    <div class="form-container sign-in-container">
+      <form id="login-form">
+        <h1>Sign in</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>Use your account</span>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <select id="login-role" required>
+          <option value="" disabled selected>Select Role</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+          <option value="theater_owner">Theater Owner</option>
+        </select>
+        <a href="#" id="forgotLink">Forgot your password?</a>
+        <button type="submit">Sign In</button>
+        <div id="welcome-message"></div>
+      </form>
+    </div>
+
+    <!-- ===== FORGOT PASSWORD ===== -->
+    <div class="form-container forgot-container">
+      <form>
+        <h1>Reset Password</h1>
+        <span>Enter your email and we’ll send a reset link</span>
+        <input type="email" placeholder="Email" required />
+        <button>Send Link</button>
+        <a href="#" id="backToSignIn">← Back to Sign In</a>
+      </form>
+    </div>
+
+    <!-- ===== OVERLAY PANELS ===== -->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected, sign in with your personal info</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Start your movie booking journey with Cinesphere</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Cinesphere | Movie Ticket Booking Made Easy</p>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+</html>
